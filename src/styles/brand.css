@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Inter:wght@300;400;500&display=swap");
+
+:root {
+  --brand-blue: #44466d;
+  --brand-red: #e91e24;
+  --brand-orange: #ea7b22;
+  --brand-gold: #edb11d;
+  --brand-yellow: #e9e316;
+  --trans-white: rgba(220, 220, 220, 0.9);
+
+  --font-main: "Inter", sans-serif;
+  --font-fancy: "Beth Ellen", cursive;
+
+  --body-copy: 400 16px "Inter", sans-serif;
+  --header: 67px/89px var(--font-fancy);
+  --subheader: 500 50px var(--font-main);
+  --med-title: 500 34px var(--font-main);
+  --button: 23px var(--font-main);
+}

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function Button({ text, outlined }) {
+function Button({ outlined, children }) {
   return (
-    <button className={`btn ${outlined ? "outlined" : ""}`}>{text}</button>
+    <button className={`btn ${outlined ? "outlined" : ""}`}>{children}</button>
   );
 }
 

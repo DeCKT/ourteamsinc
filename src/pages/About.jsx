@@ -8,6 +8,18 @@ const people = [
     email: "darin.eckton",
     duties: ["Organization", "Inspiration", "Follow up"],
   },
+  {
+    name: "Betsy Eckton",
+    img: "betsy-eckton.jpg",
+    email: "betsy.eckton",
+    duties: ["History", "Legal", "Motivator"],
+  },
+  {
+    name: "Troy Carter",
+    img: "troy-carter.jpeg",
+    email: "troy.carter",
+    duties: ["Team Mentoring", "Progress"],
+  },
 ];
 
 function About() {

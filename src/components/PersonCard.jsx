@@ -2,10 +2,19 @@ const PersonCard = (props) => {
   console.log(props);
   return (
     <div className="person-card">
-      <img src={`src/assets/images/${props.img}`} alt={props.name} />
+      <img
+        src={`src/assets/images/${props.img}`}
+        alt={props.name}
+        className="person-img"
+      />
       <div className="info-container">
-        <h3 className="card-name">{props.name}</h3>
-        <a href={`mailto:${props.email}`}></a>
+        <h4 className="card-name">{props.name}</h4>
+        <a href={`mailto:${props.email}@ourteamsinc.org`}>
+          <img
+            className="email-icon"
+            src="src/assets/envelope-svgrepo-com.svg"
+          />
+        </a>
       </div>
 
       <ul className="duties">

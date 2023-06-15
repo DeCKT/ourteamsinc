@@ -1,5 +1,7 @@
 import ImgHalfLeft from "../components/ImgHalfLeft";
 import PersonCard from "../components/PersonCard";
+import LargeImgSection from "../components/LargeImgSection";
+import Button from "../components/Button";
 
 const people = [
   {
@@ -56,6 +58,18 @@ function About() {
             })}
           </div>
         </div>
+
+        <LargeImgSection img="darin-instructing.jpg" type="large-img-right">
+          <h2>Our Structure</h2>
+          <p>Creating TEAMS provides:</p>
+          <ul>
+            <li>Organizational and tax structure</li>
+            <li>Formation according to our charter</li>
+            <li>Mentoring, web presence, and accountability</li>
+          </ul>
+
+          <Button>Apply Now</Button>
+        </LargeImgSection>
       </div>
     </>
   );

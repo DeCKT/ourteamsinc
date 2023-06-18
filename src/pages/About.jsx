@@ -2,6 +2,7 @@ import ImgHalfLeft from "../components/ImgHalfLeft";
 import PersonCard from "../components/PersonCard";
 import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
+import ThreeColImgs from "../components/ThreeColImgs";
 
 const people = [
   {
@@ -22,6 +23,15 @@ const people = [
     email: "troy.carter",
     duties: ["Team Mentoring", "Progress"],
   },
+];
+
+const motivationImgs = [
+  { src: "" },
+  { src: "" },
+  { src: "" },
+  { src: "" },
+  { src: "" },
+  { src: "" },
 ];
 
 function About() {
@@ -59,7 +69,7 @@ function About() {
           </div>
         </div>
 
-        <LargeImgSection img="darin-instructing.jpg" type="large-img-right">
+        <LargeImgSection img="darin-instructing.jpg" type="right">
           <h2>Our Structure</h2>
           <p>Creating TEAMS provides:</p>
           <ul>
@@ -70,6 +80,11 @@ function About() {
 
           <Button>Apply Now</Button>
         </LargeImgSection>
+
+        <div className="motivation-img-container">
+          <h2 className="center-text">Our Motivation</h2>
+          <ThreeColImgs imgs={motivationImgs}></ThreeColImgs>
+        </div>
       </div>
     </>
   );

@@ -1,8 +1,18 @@
 function LargeImgSection(props) {
+  let imageType = "large-img-right";
+  let sectionType = "large-img-section-left";
+
+  if (props.type === "left") {
+    imageType = "large-img-left";
+    sectionType = "large-img-section-right";
+  }
+
   return (
     <div className="large-img-container">
-      <img src={`src/assets/images/${props.img}`} className={props.type} />
-      <section className="white-background">{props.children}</section>
+      <img src={`src/assets/images/${props.img}`} className={imageType} />
+      <section className={`white-background ${sectionType}`}>
+        {props.children}
+      </section>
     </div>
   );
 }

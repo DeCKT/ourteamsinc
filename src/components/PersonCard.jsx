@@ -1,5 +1,4 @@
 const PersonCard = (props) => {
-  console.log(props);
   return (
     <div className="person-card">
       <img

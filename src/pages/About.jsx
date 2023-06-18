@@ -26,12 +26,12 @@ const people = [
 ];
 
 const motivationImgs = [
-  { src: "" },
-  { src: "" },
-  { src: "" },
-  { src: "" },
-  { src: "" },
-  { src: "" },
+  { src: "children1.jpg" },
+  { src: "darin-and-elder.jpg" },
+  { src: "woman1.jpg" },
+  { src: "woman-and-children.jpg" },
+  { src: "stacy-and-troy.jpg" },
+  { src: "darin-and-betsy.jpg" },
 ];
 
 function About() {
@@ -69,7 +69,7 @@ function About() {
           </div>
         </div>
 
-        <LargeImgSection img="darin-instructing.jpg" type="right">
+        <LargeImgSection img="darin-instructing.jpg">
           <h2>Our Structure</h2>
           <p>Creating TEAMS provides:</p>
           <ul>

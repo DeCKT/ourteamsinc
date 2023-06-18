@@ -84,6 +84,7 @@ h4 {
   grid-row: 1 / 2;
   align-self: center;
   justify-self: start;
+  padding: 15px;
 }
 
 .large-img-section-left {
@@ -98,7 +99,6 @@ h4 {
   grid-column: 2 / 5;
   grid-row: 1 / 2;
   max-width: 100%;
-  padding: 15px;
 }
 
 .large-img-left {
@@ -113,12 +113,15 @@ h4 {
 
 .three-col-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  gap: 50px;
 }
 
 .img-third {
-  max-width: 28%;
+  max-width: 29%;
   aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 /* header and navigation */

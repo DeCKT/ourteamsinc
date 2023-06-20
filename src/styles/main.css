@@ -266,6 +266,51 @@ h4 {
   margin-top: 10px;
 }
 
+/* projects */
+
+.teams-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.teams-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.teams-container ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  width: 700px;
+  border-left: 2px solid black;
+}
+
+.teams-container li a {
+  display: block;
+}
+
+.teams-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.team-name {
+  background-color: var(--brand-blue);
+  color: var(--trans-white);
+  font: var(--med-title);
+  display: block;
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(-50%);
+}
+
 /* footer */
 
 footer {

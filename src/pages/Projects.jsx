@@ -1,5 +1,21 @@
 import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
+
+const teams = [
+  {
+    name: "New Life International",
+    img: "darin-explaining.jpg",
+    type: "Active",
+  },
+  {
+    name: "Jukwa Liverpool",
+    img: "belle-maluf-xupZLJZ1RB8-unsplash.jpg",
+    type: "Alumni",
+  },
+];
+
+// Photo by <a href="https://unsplash.com/@bellemaluf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Belle Maluf</a> on <a href="https://unsplash.com/photos/xupZLJZ1RB8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 function Projects() {
   return (
@@ -13,6 +29,39 @@ function Projects() {
           who would like to get involved in a completely non-profit organization
         </p>
       </LargeImgSection>
+
+      <div className="teams-list-container">
+        <div className="active teams-container">
+          <h2>Active</h2>
+          <ul>
+            {teams
+              .filter((team) => team.type === "Active")
+              .map((team) => (
+                <li key={team.name}>
+                  <Link to="">
+                    <img src={`src/assets/images/${team.img}`} />
+                    <div className="team-name">{team.name}</div>
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </div>
+        <div className="inactive teams-container">
+          <h2>Alumni</h2>
+          <ul>
+            {teams
+              .filter((team) => team.type === "Alumni")
+              .map((team) => (
+                <li key={team.name}>
+                  <Link to="">
+                    <img src={`src/assets/images/${team.img}`} />
+                    <div className="team-name">{team.name}</div>
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </div>
+      </div>
 
       <LargeImgSection type="left" img="nepal-group.jpg">
         <h2>TEAMS Creation</h2>

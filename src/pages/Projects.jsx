@@ -18,6 +18,8 @@ const teams = [
 // Photo by <a href="https://unsplash.com/@bellemaluf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Belle Maluf</a> on <a href="https://unsplash.com/photos/xupZLJZ1RB8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 function Projects() {
+  document.title = `What We're Doing | Our TEAMS`;
+
   return (
     <div className="body-content">
       <LargeImgSection img="cleanup-project.jpg">

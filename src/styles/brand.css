@@ -13,7 +13,7 @@
 
   --body-copy: 400 18px/30px "Inter", sans-serif;
   --header: 67px/89px var(--font-fancy);
-  --subheader: 500 50px var(--font-main);
+  --subheader: 500 36px var(--font-main);
   --med-title: 500 34px var(--font-main);
   --button: 14px var(--font-main);
 }

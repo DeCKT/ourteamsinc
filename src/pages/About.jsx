@@ -35,6 +35,8 @@ const motivationImgs = [
 ];
 
 function About() {
+  document.title = "Who We Are | Our TEAMS";
+
   return (
     <>
       <div className="body-content">

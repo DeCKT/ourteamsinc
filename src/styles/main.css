@@ -23,6 +23,16 @@ h4 {
   font: var(--med-title);
 }
 
+h5 {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.page-hidden {
+  display: none;
+}
+
 .white-background {
   background-color: var(--trans-white);
   border-radius: 10px;

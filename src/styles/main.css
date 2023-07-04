@@ -39,6 +39,11 @@ h5 {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.indented li {
+  margin-left: 60px;
+  list-style-type: disc;
+}
+
 .body-content {
   width: 100%;
   max-width: 1050px;
@@ -389,6 +394,54 @@ h5 {
 
 .application-block span {
   font-size: 38px;
+}
+
+/* forms */
+
+.form-title-container {
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-indicator {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4px;
+  font-size: 18px;
+}
+
+.form-page {
+  background-color: var(--trans-white);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.half-input {
+  width: 45%;
+}
+
+.full-input {
+  width: 100%;
+}
+
+.full-input,
+.half-input {
+  border-radius: 10px;
+  background-color: white;
+  padding: 8px 16px;
+  border: transparent;
+}
+
+.form-button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 /* footer */

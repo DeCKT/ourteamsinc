@@ -1,5 +1,6 @@
 import Form from "../components/Form";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const applicationPages = [
   {
@@ -26,9 +27,13 @@ const applicationPages = [
 ];
 
 function Apply() {
+  useEffect(() => {
+    document.title = "Application | Our TEAMS Inc";
+  }, []);
+
   return (
     <div className="body-content">
-      <div className="form-desciption">
+      <div className="form-description">
         <h1>Create TEAMS</h1>
         <p>
           Have an idea for a project that is educational or developmental in any
@@ -38,16 +43,18 @@ function Apply() {
         <br></br>
         <p>
           To help you prepare to fill out this application, we will ask you
-          about the following four items:{" "}
-          <ul className="indented">
-            <li>Personal Information</li>
-            <li>Project Goals/Desired Outcomes</li>
-            <li>How You Will Accomplish Your Goals/Outcomes</li>
-            <li>Anticipated Timeline</li>
-          </ul>
+          about the following four items:
+        </p>
+        <ul className="indented">
+          <li>Personal Information</li>
+          <li>Project Goals/Desired Outcomes</li>
+          <li>How You Will Accomplish Your Goals/Outcomes</li>
+          <li>Anticipated Timeline</li>
+        </ul>
+        <div className="help-needed">
           (If you have any questions about the application, please email{" "}
           <a href="mailto:admin@ourteamsinc.org">admin@ourteamsinc.org</a>)
-        </p>
+        </div>
       </div>
       <Form pages={applicationPages}>
         <h5>Thank you for your application!</h5>

@@ -7,6 +7,7 @@ import Help from "./pages/Help";
 import Contact from "./pages/Contact";
 import Apply from "./pages/Apply";
 import Missing from "./pages/Missing";
+import Team from "./pages/Team";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="make-a-difference" element={<Help />} />
           <Route path="contact-us" element={<Contact />} />
           <Route path="teams-application" element={<Apply />} />
+          <Route path="team/:teamId" element={<Team />} />
           <Route path="*" element={<Missing />} />
         </Route>
       </Routes>

@@ -78,7 +78,7 @@ export default function Form(props) {
           </div>
         );
       })}
-      <div className="form-page">{props.children}</div>
+      <div className="form-page thanks-page">{props.children}</div>
     </div>
   );
 }

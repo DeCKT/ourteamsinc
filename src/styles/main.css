@@ -40,8 +40,9 @@ h5 {
 }
 
 .indented li {
-  margin-left: 60px;
+  margin-left: 40px;
   list-style-type: disc;
+  font: var(--body-copy);
 }
 
 .body-content {
@@ -51,7 +52,7 @@ h5 {
   margin: 50px auto;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
 }
 
 .img-half {
@@ -333,6 +334,24 @@ h5 {
   transform: translateY(-50%);
 }
 
+/* team */
+
+.team-page .fullpage {
+  padding: 50px;
+  filter: blur(8px);
+}
+
+.team-intro {
+  background-color: var(--trans-white);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 30px auto;
+  width: 100%;
+  max-width: 1050px;
+  padding: 0 50px;
+  position: relative;
+}
+
 /* help */
 
 .mid-width-section {
@@ -398,6 +417,14 @@ h5 {
 
 /* forms */
 
+.thanks-page p {
+  padding-right: 45%;
+}
+
+.form-description {
+  padding-right: 35%;
+}
+
 .form-title-container {
   margin: 6px 0;
   display: flex;
@@ -411,6 +438,12 @@ h5 {
   font-size: 18px;
 }
 
+/* .form {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+} */
+
 .form-page {
   background-color: var(--trans-white);
   border-radius: 10px;
@@ -418,8 +451,12 @@ h5 {
   padding: 30px;
   display: flex;
   flex-flow: row wrap;
-  gap: 25px;
+  gap: 35px;
+  align-items: flex-start;
+  align-content: flex-start;
   justify-content: space-between;
+  height: 430px;
+  position: relative;
 }
 
 .half-input {
@@ -430,18 +467,31 @@ h5 {
   width: 100%;
 }
 
+textarea {
+  width: 100%;
+  resize: none;
+  height: 60%;
+}
+
 .full-input,
-.half-input {
+.half-input,
+textarea {
   border-radius: 10px;
   background-color: white;
   padding: 8px 16px;
   border: transparent;
+  font: var(--body-copy);
 }
 
 .form-button-container {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  max-width: 100%;
+  margin-top: 100px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  left: 30px;
 }
 
 /* footer */

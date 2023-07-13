@@ -1,33 +1,38 @@
 import Button from "./Button";
 import { useEffect, useState } from "react";
+import cslImg1 from "../assets/images/darin-and-children.jpg";
+import cslImg2 from "../assets/images/darin-explaining.jpg";
+import cslImg3 from "../assets/images/darin-sharing.jpg";
+import cslImg4 from "../assets/images/group-patching.jpg";
+import cslImg5 from "../assets/images/medical-help.jpg";
 
 const stuff = [
   {
-    img: "src/assets/images/darin-and-children.jpg",
+    img: cslImg1,
     desc: "Orphanage students provided with secondary school",
     btn: "Read Story",
     pos: "50% 30%",
   },
   {
-    img: "src/assets/images/darin-explaining.jpg",
+    img: cslImg2,
     desc: "Rebuilding a community torn apart by natural disasters",
     btn: "Santa Isabel TEAM",
     pos: "50% 50%",
   },
   {
-    img: "src/assets/images/darin-sharing.jpg",
+    img: cslImg3,
     desc: "Medical services provided to remote communities",
     btn: "Support TEAM",
     pos: "50% 50%",
   },
   {
-    img: "src/assets/images/group-patching.jpg",
+    img: cslImg4,
     desc: "Village in Ghana provided with needed resources",
     btn: "Read Story",
     pos: "50% 50%",
   },
   {
-    img: "src/assets/images/medical-help.jpg",
+    img: cslImg5,
     desc: "School supplies enable children to pursue education",
     btn: "Donate Supplies",
     pos: "50% 50%",

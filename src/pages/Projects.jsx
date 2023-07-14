@@ -2,15 +2,19 @@ import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
+import darinExplaining from "../assets/images/darin-explaining.jpg";
+import soccerImg from "../assets/images/belle-maluf-xupZLJZ1RB8-unsplash.jpg";
+import cleanProject from "../assets/images/cleanup-project.jpg";
+
 const teams = [
   {
     name: "New Life International",
-    img: "darin-explaining.jpg",
+    img: darinExplaining,
     type: "Active",
   },
   {
     name: "Jukwa Liverpool",
-    img: "belle-maluf-xupZLJZ1RB8-unsplash.jpg",
+    img: soccerImg,
     type: "Alumni",
   },
 ];
@@ -22,7 +26,7 @@ function Projects() {
 
   return (
     <div className="body-content">
-      <LargeImgSection img="cleanup-project.jpg">
+      <LargeImgSection img={cleanProject}>
         <h1>TEAMS</h1>
         <p>
           We have a variety of active TEAMS and opportunities to create new

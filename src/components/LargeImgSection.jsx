@@ -9,7 +9,7 @@ function LargeImgSection(props) {
 
   return (
     <div className="large-img-container">
-      <img src={`src/assets/images/${props.img}`} className={imageType} />
+      <img src={props.img} className={imageType} />
       <section className={`white-background ${sectionType}`}>
         {props.children}
       </section>

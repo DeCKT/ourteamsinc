@@ -6,7 +6,7 @@ function ThreeColImgs(props) {
           <img
             key={props.imgs.indexOf(img)}
             className="img-third"
-            src={`src/assets/images/${img.src}`}
+            src={img.src}
           />
         );
       })}

@@ -4,34 +4,48 @@ import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
 import ThreeColImgs from "../components/ThreeColImgs";
 
+import darinAndBetsy from "../assets/images/darin-and-betsy.jpg";
+import darinInstructing from "../assets/images/darin-instructing.jpg";
+
+import darinHeadshot from "../assets/images/darin-eckton.jpeg";
+import betsyHeadshot from "../assets/images/betsy-eckton.jpg";
+import troyHeadshot from "../assets/images/troy-carter.jpeg";
+
+import motiv1 from "../assets/images/children1.jpg";
+import motiv2 from "../assets/images/darin-and-elder.jpg";
+import motiv3 from "../assets/images/woman1.jpg";
+import motiv4 from "../assets/images/woman-and-children.jpg";
+import motiv5 from "../assets/images/stacy-and-troy.jpg";
+import motiv6 from "../assets/images/darin-and-betsy.jpg";
+
 const people = [
   {
     name: "Darin Eckton",
-    img: "darin-eckton.jpeg",
+    img: darinHeadshot,
     email: "darin.eckton",
     duties: ["Organization", "Inspiration", "Follow up"],
   },
   {
     name: "Betsy Eckton",
-    img: "betsy-eckton.jpg",
+    img: betsyHeadshot,
     email: "betsy.eckton",
     duties: ["History", "Legal", "Motivator"],
   },
   {
     name: "Troy Carter",
-    img: "troy-carter.jpeg",
+    img: troyHeadshot,
     email: "troy.carter",
     duties: ["Team Mentoring", "Progress"],
   },
 ];
 
 const motivationImgs = [
-  { src: "children1.jpg" },
-  { src: "darin-and-elder.jpg" },
-  { src: "woman1.jpg" },
-  { src: "woman-and-children.jpg" },
-  { src: "stacy-and-troy.jpg" },
-  { src: "darin-and-betsy.jpg" },
+  { src: motiv1 },
+  { src: motiv2 },
+  { src: motiv3 },
+  { src: motiv4 },
+  { src: motiv5 },
+  { src: motiv6 },
 ];
 
 function About() {
@@ -40,7 +54,7 @@ function About() {
   return (
     <>
       <div className="body-content">
-        <ImgHalfLeft url="darin-and-betsy.jpg" alt="">
+        <ImgHalfLeft img={darinAndBetsy} alt="">
           <h1>Who We Are</h1>
           <p>
             Our mission is to pursue educational and developmental opportunities
@@ -71,7 +85,7 @@ function About() {
           </div>
         </div>
 
-        <LargeImgSection img="darin-instructing.jpg">
+        <LargeImgSection img={darinInstructing}>
           <h2>Our Structure</h2>
           <p>Creating TEAMS provides:</p>
           <ul>

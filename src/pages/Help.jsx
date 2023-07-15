@@ -2,6 +2,8 @@ import ImgHalfLeft from "../components/ImgHalfLeft";
 import MidWidthSection from "../components/MidWidthSection";
 import Button from "../components/Button";
 
+import nepalGroup from "../assets/images/nepal-group-before.jpg";
+
 const displayTeams = [
   {
     name: "Bethesda",
@@ -34,7 +36,7 @@ function Help() {
 
   return (
     <div className="body-content">
-      <ImgHalfLeft url="nepal-group-before.jpg">
+      <ImgHalfLeft img="nepal-group-before.jpg">
         <h1>Make A Difference</h1>
         <p>
           We offer a variety of ways that you can make a difference, from

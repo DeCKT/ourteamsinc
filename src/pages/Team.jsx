@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
 
+import bgImg from "../assets/images/darin-and-children.jpg";
+
 // example team data
 const exTeam = {
   teamId: "1",
   teamName: "New Life International",
   desc: "We are aiming to raise $35,000 to help complete construction of the New life International Orphanage secondary school.",
-  bgImg: "darin-and-children.jpg",
+  bgImg: bgImg,
   donate: "donate-url",
   volunteer: "volunteer-url",
   goal: 35000,
@@ -54,7 +56,7 @@ export default function Team() {
     <div className="team-page">
       <div
         className="fullpage"
-        style={{ backgroundImage: `url(/src/assets/images/${exTeam.bgImg})` }}
+        style={{ backgroundImage: `url(${exTeam.bgImg})` }}
       ></div>
       <div className="team-intro">
         <h1>{exTeam.teamName}</h1>

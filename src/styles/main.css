@@ -336,9 +336,12 @@ h5 {
 
 /* team */
 
-.team-page .fullpage {
+.intro-container .fullpage {
   padding: 50px;
-  filter: blur(8px);
+  filter: blur(6px);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .team-intro {
@@ -349,6 +352,10 @@ h5 {
   width: 100%;
   max-width: 1050px;
   padding: 0 50px;
+  position: relative;
+}
+
+.intro-container {
   position: relative;
 }
 

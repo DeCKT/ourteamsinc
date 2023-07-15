@@ -54,12 +54,15 @@ export default function Team() {
   let params = useParams();
   return (
     <div className="team-page">
-      <div
-        className="fullpage"
-        style={{ backgroundImage: `url(${exTeam.bgImg})` }}
-      ></div>
-      <div className="team-intro">
-        <h1>{exTeam.teamName}</h1>
+      <div className="intro-container">
+        <div
+          className="fullpage"
+          style={{ backgroundImage: `url(${exTeam.bgImg})` }}
+        ></div>
+        <div className="team-intro">
+          <h1>{exTeam.teamName}</h1>
+          <p>{exTeam.desc}</p>
+        </div>
       </div>
     </div>
   );

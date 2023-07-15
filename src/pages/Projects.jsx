@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import darinExplaining from "../assets/images/darin-explaining.jpg";
 import soccerImg from "../assets/images/belle-maluf-xupZLJZ1RB8-unsplash.jpg";
 import cleanProject from "../assets/images/cleanup-project.jpg";
+import nepalGroup from "../assets/images/nepal-group.jpg";
 
 const teams = [
   {
@@ -45,7 +46,7 @@ function Projects() {
               .map((team) => (
                 <li key={team.name}>
                   <Link to="">
-                    <img src={`src/assets/images/${team.img}`} />
+                    <img src={team.img} />
                     <div className="team-name">{team.name}</div>
                   </Link>
                 </li>
@@ -60,7 +61,7 @@ function Projects() {
               .map((team) => (
                 <li key={team.name}>
                   <Link to="">
-                    <img src={`src/assets/images/${team.img}`} />
+                    <img src={team.img} />
                     <div className="team-name">{team.name}</div>
                   </Link>
                 </li>
@@ -69,7 +70,7 @@ function Projects() {
         </div>
       </div>
 
-      <LargeImgSection type="left" img="nepal-group.jpg">
+      <LargeImgSection type="left" img={nepalGroup}>
         <h2>TEAMS Creation</h2>
         <p>
           Do you have an idea for a service project which could benefit from our

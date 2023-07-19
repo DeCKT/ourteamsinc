@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
+import { useEffect } from "react";
 
 const contactPage = [
   {
@@ -15,6 +16,10 @@ const contactPage = [
 ];
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="body-content">
       <div className="form-description">

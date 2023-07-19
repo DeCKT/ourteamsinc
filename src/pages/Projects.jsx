@@ -6,6 +6,7 @@ import darinExplaining from "../assets/images/darin-explaining.jpg";
 import soccerImg from "../assets/images/belle-maluf-xupZLJZ1RB8-unsplash.jpg";
 import cleanProject from "../assets/images/cleanup-project.jpg";
 import nepalGroup from "../assets/images/nepal-group.jpg";
+import { useEffect } from "react";
 
 const teams = [
   {
@@ -23,7 +24,10 @@ const teams = [
 // Photo by <a href="https://unsplash.com/@bellemaluf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Belle Maluf</a> on <a href="https://unsplash.com/photos/xupZLJZ1RB8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 function Projects() {
-  document.title = `What We're Doing | Our TEAMS`;
+  useEffect(() => {
+    document.title = `What We're Doing | Our TEAMS`;
+    window.scrollTo(0, 0);
+  });
 
   return (
     <div className="body-content">

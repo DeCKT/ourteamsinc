@@ -17,6 +17,7 @@ import motiv3 from "../assets/images/woman1.jpg";
 import motiv4 from "../assets/images/woman-and-children.jpg";
 import motiv5 from "../assets/images/stacy-and-troy.jpg";
 import motiv6 from "../assets/images/darin-and-betsy.jpg";
+import { useEffect } from "react";
 
 const people = [
   {
@@ -50,6 +51,10 @@ const motivationImgs = [
 
 function About() {
   document.title = "Who We Are | Our TEAMS";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <>

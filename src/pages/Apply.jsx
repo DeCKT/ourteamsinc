@@ -29,6 +29,7 @@ const applicationPages = [
 function Apply() {
   useEffect(() => {
     document.title = "Application | Our TEAMS Inc";
+    window.scrollTo(0, 0);
   }, []);
 
   return (

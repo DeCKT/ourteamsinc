@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 function Home() {
   useEffect(() => {
     document.title = "Home | Our TEAMS Inc";
+    window.scrollTo(0, 0);
   }, []);
 
   return (

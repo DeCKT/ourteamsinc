@@ -3,6 +3,7 @@ import MidWidthSection from "../components/MidWidthSection";
 import Button from "../components/Button";
 
 import nepalGroup from "../assets/images/nepal-group-before.jpg";
+import { useEffect } from "react";
 
 const displayTeams = [
   {
@@ -32,11 +33,14 @@ const displayTeams = [
 ];
 
 function Help() {
-  document.title = "Make A Difference | Our TEAMS";
+  useEffect(() => {
+    document.title = "Make A Difference | Our TEAMS";
+    window.scrollTo(0, 0);
+  });
 
   return (
     <div className="body-content">
-      <ImgHalfLeft img="nepal-group-before.jpg">
+      <ImgHalfLeft img={nepalGroup}>
         <h1>Make A Difference</h1>
         <p>
           We offer a variety of ways that you can make a difference, from
@@ -70,7 +74,7 @@ function Help() {
               .filter((team) => team.type === "donate")
               .map((team) => {
                 return (
-                  <li className="team-block">
+                  <li className="team-block" key={displayTeams.indexOf(team)}>
                     <h3>{team.name}</h3>
                     <p>{team.desc}</p>
                     <div className="buttons">
@@ -102,7 +106,7 @@ function Help() {
               .filter((team) => team.type === "volunteer")
               .map((team) => {
                 return (
-                  <li className="team-block">
+                  <li className="team-block" key={displayTeams.indexOf(team)}>
                     <h3>{team.name}</h3>
                     <p>{team.desc}</p>
                     <div className="buttons">

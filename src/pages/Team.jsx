@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 
 import bgImg from "../assets/images/darin-and-children.jpg";
+import { useEffect } from "react";
+import Button from "../components/Button";
 
 // example team data
 const exTeam = {
@@ -51,7 +53,11 @@ const exTeam = {
 };
 
 export default function Team() {
-  let params = useParams();
+  useEffect(() => {
+    document.title = `${exTeam.teamName} | Our TEAMS`;
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="team-page">
       <div className="intro-container">
@@ -62,6 +68,12 @@ export default function Team() {
         <div className="team-intro">
           <h1>{exTeam.teamName}</h1>
           <p>{exTeam.desc}</p>
+          {exTeam.donate || exTeam.volunteer ? (
+            <div className="intro-btn-container">
+              {exTeam.donate ? <Button>Donate</Button> : null}
+              {exTeam.donate ? <Button outlined>Volunteer</Button> : null}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

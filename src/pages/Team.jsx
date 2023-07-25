@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import bgImg from "../assets/images/darin-and-children.jpg";
 import { useEffect } from "react";
 import Button from "../components/Button";
+import ProgBar from "../components/ProgBar";
 
 // example team data
 const exTeam = {
@@ -16,7 +17,7 @@ const exTeam = {
   progress: 29402,
   subgoals: [
     { amount: 15000, purpose: "Finish Walls and Roof" },
-    { amount: 20000, purpose: "Pave Surrounding Area" },
+    { amount: 30000, purpose: "Pave Surrounding Area" },
   ],
   sections: [
     {
@@ -52,6 +53,16 @@ const exTeam = {
   ],
 };
 
+function chooseComponent(section) {
+  switch (section.style) {
+    case value:
+      break;
+
+    default:
+      break;
+  }
+}
+
 export default function Team() {
   useEffect(() => {
     document.title = `${exTeam.teamName} | Our TEAMS`;
@@ -75,6 +86,13 @@ export default function Team() {
             </div>
           ) : null}
         </div>
+      </div>
+      <div className="body-content">
+        <ProgBar
+          goal={exTeam.goal}
+          prog={exTeam.progress}
+          subs={exTeam.subgoals}
+        />
       </div>
     </div>
   );

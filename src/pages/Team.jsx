@@ -4,6 +4,7 @@ import bgImg from "../assets/images/darin-and-children.jpg";
 import { useEffect } from "react";
 import Button from "../components/Button";
 import ProgBar from "../components/ProgBar";
+import ImgHalfLeft from "../components/ImgHalfLeft";
 
 // example team data
 const exTeam = {
@@ -55,7 +56,8 @@ const exTeam = {
 
 function chooseComponent(section) {
   switch (section.style) {
-    case value:
+    case "ImgHalfLeft":
+      return <ImgHalfLeft img={section.images}></ImgHalfLeft>;
       break;
 
     default:

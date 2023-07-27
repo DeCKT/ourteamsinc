@@ -4,7 +4,6 @@ import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
 import ThreeColImgs from "../components/ThreeColImgs";
 
-import darinAndBetsy from "../assets/images/darin-and-betsy.jpg";
 import darinInstructing from "../assets/images/darin-instructing.jpg";
 
 import darinHeadshot from "../assets/images/darin-eckton.jpeg";
@@ -59,7 +58,7 @@ function About() {
   return (
     <>
       <div className="body-content">
-        <ImgHalfLeft img={darinAndBetsy} alt="">
+        <ImgHalfLeft img="darin-and-betsy.jpg" alt="">
           <h1>Who We Are</h1>
           <p>
             Our mission is to pursue educational and developmental opportunities

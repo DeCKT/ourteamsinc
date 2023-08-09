@@ -7,7 +7,7 @@ const ImgHalfLeft = (props) => {
     const fetchImg = async () => {
       try {
         const resp = await import(
-          `../assets/images/${props.img}` /* @vite-ignore */
+          `../src/assets/images/${props.img}` /* @vite-ignore */
         );
         setImage(resp.default);
       } catch (err) {

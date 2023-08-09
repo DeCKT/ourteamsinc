@@ -4,48 +4,36 @@ import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
 import ThreeColImgs from "../components/ThreeColImgs";
 
-import darinInstructing from "../assets/images/darin-instructing.jpg";
-
-import darinHeadshot from "../assets/images/darin-eckton.jpeg";
-import betsyHeadshot from "../assets/images/betsy-eckton.jpg";
-import troyHeadshot from "../assets/images/troy-carter.jpeg";
-
-import motiv1 from "../assets/images/children1.jpg";
-import motiv2 from "../assets/images/darin-and-elder.jpg";
-import motiv3 from "../assets/images/woman1.jpg";
-import motiv4 from "../assets/images/woman-and-children.jpg";
-import motiv5 from "../assets/images/stacy-and-troy.jpg";
-import motiv6 from "../assets/images/darin-and-betsy.jpg";
 import { useEffect } from "react";
 
 const people = [
   {
     name: "Darin Eckton",
-    img: darinHeadshot,
+    img: "darin-eckton.jpeg",
     email: "darin.eckton",
     duties: ["Organization", "Inspiration", "Follow up"],
   },
   {
     name: "Betsy Eckton",
-    img: betsyHeadshot,
+    img: "betsy-eckton.jpg",
     email: "betsy.eckton",
     duties: ["History", "Legal", "Motivator"],
   },
   {
     name: "Troy Carter",
-    img: troyHeadshot,
+    img: "troy-carter.jpeg",
     email: "troy.carter",
     duties: ["Team Mentoring", "Progress"],
   },
 ];
 
 const motivationImgs = [
-  { src: motiv1 },
-  { src: motiv2 },
-  { src: motiv3 },
-  { src: motiv4 },
-  { src: motiv5 },
-  { src: motiv6 },
+  "children1.jpg",
+  "darin-and-elder.jpg",
+  "woman1.jpg",
+  "woman-and-children.jpg",
+  "stacy-and-troy.jpg",
+  "darin-and-betsy.jpg",
 ];
 
 function About() {
@@ -89,7 +77,7 @@ function About() {
           </div>
         </div>
 
-        <LargeImgSection img={darinInstructing}>
+        <LargeImgSection img="darin-instructing.jpg">
           <h2>Our Structure</h2>
           <p>Creating TEAMS provides:</p>
           <ul>

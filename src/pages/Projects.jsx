@@ -1,22 +1,19 @@
 import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import ProjTeam from "../components/ProjTeam";
 
-import darinExplaining from "../assets/images/darin-explaining.jpg";
-import soccerImg from "../assets/images/belle-maluf-xupZLJZ1RB8-unsplash.jpg";
-import cleanProject from "../assets/images/cleanup-project.jpg";
-import nepalGroup from "../assets/images/nepal-group.jpg";
 import { useEffect } from "react";
 
 const teams = [
   {
     name: "New Life International",
-    img: darinExplaining,
+    img: "darin-explaining.jpg",
     type: "Active",
   },
   {
     name: "Jukwa Liverpool",
-    img: soccerImg,
+    img: "belle-maluf-xupZLJZ1RB8-unsplash.jpg",
     type: "Alumni",
   },
 ];
@@ -31,7 +28,7 @@ function Projects() {
 
   return (
     <div className="body-content">
-      <LargeImgSection img={cleanProject}>
+      <LargeImgSection img="darin-explaining.jpg">
         <h1>TEAMS</h1>
         <p>
           We have a variety of active TEAMS and opportunities to create new
@@ -48,12 +45,11 @@ function Projects() {
             {teams
               .filter((team) => team.type === "Active")
               .map((team) => (
-                <li key={team.name}>
-                  <Link to="">
-                    <img src={team.img} />
-                    <div className="team-name">{team.name}</div>
-                  </Link>
-                </li>
+                <ProjTeam
+                  key={teams.indexOf(team)}
+                  img={team.img}
+                  name={team.name}
+                />
               ))}
           </ul>
         </div>
@@ -63,18 +59,17 @@ function Projects() {
             {teams
               .filter((team) => team.type === "Alumni")
               .map((team) => (
-                <li key={team.name}>
-                  <Link to="">
-                    <img src={team.img} />
-                    <div className="team-name">{team.name}</div>
-                  </Link>
-                </li>
+                <ProjTeam
+                  key={teams.indexOf(team)}
+                  img={team.img}
+                  name={team.name}
+                />
               ))}
           </ul>
         </div>
       </div>
 
-      <LargeImgSection type="left" img={nepalGroup}>
+      <LargeImgSection type="left" img={"nepal-group.jpg"}>
         <h2>TEAMS Creation</h2>
         <p>
           Do you have an idea for a service project which could benefit from our

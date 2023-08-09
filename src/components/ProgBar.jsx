@@ -17,7 +17,7 @@ export default function ProgBar(props) {
         <ul>
           {props.subs.map((goal) => {
             return (
-              <li>
+              <li key={props.subs.indexOf(goal)}>
                 <img src={props.prog >= goal.amount ? check : ongoing} />$
                 {goal.amount.toLocaleString("en", { useGrouping: true })} -{" "}
                 {goal.purpose}

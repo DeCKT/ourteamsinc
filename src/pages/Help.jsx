@@ -40,7 +40,7 @@ function Help() {
 
   return (
     <div className="body-content">
-      <ImgHalfLeft img={nepalGroup}>
+      <ImgHalfLeft img="nepal-group-before.jpg">
         <h1>Make A Difference</h1>
         <p>
           We offer a variety of ways that you can make a difference, from

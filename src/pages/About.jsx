@@ -4,36 +4,50 @@ import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
 import ThreeColImgs from "../components/ThreeColImgs";
 
+import darinAndBetsy from "../assets/images/darin-and-betsy.jpg";
+import darinInstructing from "../assets/images/darin-instructing.jpg";
+
+import darin from "../assets/images/darin-eckton.jpeg";
+import betsy from "../assets/images/betsy-eckton.jpg";
+import troy from "../assets/images/troy-carter.jpeg";
+
+import motivImg1 from "../assets/images/children1.jpg";
+import motivImg2 from "../assets/images/darin-and-elder.jpg";
+import motivImg3 from "../assets/images/woman1.jpg";
+import motivImg4 from "../assets/images/woman-and-children.jpg";
+import motivImg5 from "../assets/images/stacy-and-troy.jpg";
+import motivImg6 from "../assets/images/darin-and-betsy.jpg";
+
 import { useEffect } from "react";
 
 const people = [
   {
     name: "Darin Eckton",
-    img: "darin-eckton.jpeg",
+    img: darin,
     email: "darin.eckton",
     duties: ["Organization", "Inspiration", "Follow up"],
   },
   {
     name: "Betsy Eckton",
-    img: "betsy-eckton.jpg",
+    img: betsy,
     email: "betsy.eckton",
     duties: ["History", "Legal", "Motivator"],
   },
   {
     name: "Troy Carter",
-    img: "troy-carter.jpeg",
+    img: troy,
     email: "troy.carter",
     duties: ["Team Mentoring", "Progress"],
   },
 ];
 
 const motivationImgs = [
-  "children1.jpg",
-  "darin-and-elder.jpg",
-  "woman1.jpg",
-  "woman-and-children.jpg",
-  "stacy-and-troy.jpg",
-  "darin-and-betsy.jpg",
+  motivImg1,
+  motivImg2,
+  motivImg3,
+  motivImg4,
+  motivImg5,
+  motivImg6,
 ];
 
 function About() {
@@ -46,7 +60,7 @@ function About() {
   return (
     <>
       <div className="body-content">
-        <ImgHalfLeft img="darin-and-betsy.jpg" alt="">
+        <ImgHalfLeft img={darinAndBetsy} alt="">
           <h1>Who We Are</h1>
           <p>
             Our mission is to pursue educational and developmental opportunities
@@ -77,7 +91,7 @@ function About() {
           </div>
         </div>
 
-        <LargeImgSection img="darin-instructing.jpg">
+        <LargeImgSection img={darinInstructing}>
           <h2>Our Structure</h2>
           <p>Creating TEAMS provides:</p>
           <ul>

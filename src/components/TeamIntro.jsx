@@ -4,26 +4,26 @@ import Button from "./Button";
 
 export default function TeamIntro(props) {
   const [image, setImage] = useState("");
-  useEffect(() => {
-    const fetchImg = async () => {
-      try {
-        const resp = await import(
-          `../assets/images/${props.bgImg}` /* @vite-ignore */
-        );
-        setImage(resp.default);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchImg = async () => {
+  //     try {
+  //       const resp = await import(
+  //         `../assets/images/${props.bgImg}` /* @vite-ignore */
+  //       );
+  //       setImage(resp.default);
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   };
 
-    fetchImg();
-  }, [props]);
+  //   fetchImg();
+  // }, [props]);
 
   return (
     <>
       <div
         className="fullpage"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${props.bgImg})` }}
       ></div>
       <div className="team-intro">
         <h1>{props.teamName}</h1>

@@ -3,17 +3,21 @@ import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import ProjTeam from "../components/ProjTeam";
 
+import darinExplain from "../assets/images/darin-explaining.jpg";
+import soccer from "../assets/images/belle-maluf-xupZLJZ1RB8-unsplash.jpg";
+import nepalGroup from "../assets/images/nepal-group.jpg";
+
 import { useEffect } from "react";
 
 const teams = [
   {
     name: "New Life International",
-    img: "darin-explaining.jpg",
+    img: darinExplain,
     type: "Active",
   },
   {
     name: "Jukwa Liverpool",
-    img: "belle-maluf-xupZLJZ1RB8-unsplash.jpg",
+    img: soccer,
     type: "Alumni",
   },
 ];
@@ -28,7 +32,7 @@ function Projects() {
 
   return (
     <div className="body-content">
-      <LargeImgSection img="darin-explaining.jpg">
+      <LargeImgSection img={darinExplain}>
         <h1>TEAMS</h1>
         <p>
           We have a variety of active TEAMS and opportunities to create new
@@ -69,7 +73,7 @@ function Projects() {
         </div>
       </div>
 
-      <LargeImgSection type="left" img={"nepal-group.jpg"}>
+      <LargeImgSection type="left" img={nepalGroup}>
         <h2>TEAMS Creation</h2>
         <p>
           Do you have an idea for a service project which could benefit from our

@@ -80,7 +80,7 @@ function chooseComponent(section) {
       return (
         <ImgHalfLeft
           key={exTeam.sections.indexOf(section)}
-          img={section.images[0]}
+          img={section.images}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
           {section.content != null ? <p>{section.content}</p> : null}

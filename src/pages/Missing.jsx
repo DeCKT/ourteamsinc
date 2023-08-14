@@ -1,5 +1,5 @@
 function Missing() {
-  return "WHOOPSIES! 🤣";
+  return "Page Not Found";
 }
 
 export default Missing;

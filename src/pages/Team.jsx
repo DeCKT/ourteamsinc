@@ -80,7 +80,7 @@ function chooseComponent(section) {
       return (
         <ImgHalfLeft
           key={exTeam.sections.indexOf(section)}
-          img={section.images}
+          img={`../images/${section.images}`}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
           {section.content != null ? <p>{section.content}</p> : null}
@@ -90,7 +90,7 @@ function chooseComponent(section) {
       return (
         <ThreeColImgs
           key={exTeam.sections.indexOf(section)}
-          imgs={section.images}
+          imgs={`../images/${section.images}`}
         ></ThreeColImgs>
       );
     case "MidWidthSection":
@@ -104,7 +104,7 @@ function chooseComponent(section) {
       return (
         <LargeImgSection
           key={exTeam.sections.indexOf(section)}
-          img={section.images[0]}
+          img={`../images/${section.images[0]}`}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
           {section.content != null ? parseContent(section.content) : null}

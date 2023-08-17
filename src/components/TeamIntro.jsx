@@ -4,6 +4,8 @@ import Button from "./Button";
 
 export default function TeamIntro(props) {
   const [image, setImage] = useState("");
+
+  const bgImg = `url(../src/assets/images/${props.bgImg})`;
   // useEffect(() => {
   //   const fetchImg = async () => {
   //     try {
@@ -21,10 +23,7 @@ export default function TeamIntro(props) {
 
   return (
     <>
-      <div
-        className="fullpage"
-        style={{ backgroundImage: `url(${props.bgImg})` }}
-      ></div>
+      <div className="fullpage" style={{ backgroundImage: bgImg }}></div>
       <div className="team-intro">
         <h1>{props.teamName}</h1>
         <p>{props.desc}</p>

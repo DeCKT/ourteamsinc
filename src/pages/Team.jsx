@@ -80,7 +80,7 @@ function chooseComponent(section) {
       return (
         <ImgHalfLeft
           key={exTeam.sections.indexOf(section)}
-          img={`../images/${section.images}`}
+          img={`../src/assets/images/${section.images}`}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
           {section.content != null ? <p>{section.content}</p> : null}
@@ -90,7 +90,7 @@ function chooseComponent(section) {
       return (
         <ThreeColImgs
           key={exTeam.sections.indexOf(section)}
-          imgs={`../images/${section.images}`}
+          imgs={imgArrayHelper(section.images)}
         ></ThreeColImgs>
       );
     case "MidWidthSection":
@@ -104,7 +104,7 @@ function chooseComponent(section) {
       return (
         <LargeImgSection
           key={exTeam.sections.indexOf(section)}
-          img={`../images/${section.images[0]}`}
+          img={`../src/assets/images/${section.images}`}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
           {section.content != null ? parseContent(section.content) : null}
@@ -114,6 +114,12 @@ function chooseComponent(section) {
       console.log(`Section style ${section.style} cannot be parsed`);
       break;
   }
+}
+
+function imgArrayHelper(array) {
+  return array.map((url) => {
+    return `../src/assets/images/${url}`;
+  });
 }
 
 export default function Team() {

@@ -220,6 +220,10 @@ h5 {
   padding: 15px;
 }
 
+.carousel-content {
+  transition: transform 0.5s ease-in-out;
+}
+
 .carousel-content p {
   margin-bottom: 25px;
   line-height: 1.2em;
@@ -227,6 +231,7 @@ h5 {
 
 #carousel .image-container {
   background-size: cover;
+  transition: background-image 0.5s ease-in-out;
 }
 
 .carousel-controls {

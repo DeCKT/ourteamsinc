@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 import { useEffect } from "react";
 import ProgBar from "../components/ProgBar";
@@ -8,57 +9,7 @@ import MidWidthSection from "../components/MidWidthSection";
 import TeamIntro from "../components/TeamIntro";
 import ThreeColImgs from "../components/ThreeColImgs";
 
-// example team data
-const exTeam = {
-  teamId: "1",
-  teamName: "New Life International",
-  desc: "We are aiming to raise $35,000 to help complete construction of the New life International Orphanage secondary school.",
-  bgImg: "darin-and-children.jpg",
-  donate: "donate-url",
-  volunteer: "volunteer-url",
-  goal: 35000,
-  progress: 29402,
-  subgoals: [
-    { amount: 15000, purpose: "Finish Walls and Roof" },
-    { amount: 30000, purpose: "Pave Surrounding Area" },
-  ],
-  sections: [
-    {
-      header: "About",
-      content: [
-        "New Life International Orphanage is a charitable organization focused on providing orphans with enhanced educational opportunities. New Life International Orphanage aims to create a brighter future for orphaned children by providing them with a dedicated educational facility.",
-      ],
-      images: ["cleanup-project.jpg"],
-      style: "ImgHalfLeft",
-    },
-    {
-      header: null,
-      content: [
-        "New Life International Orphanage is a charitable organization focused on providing orphans with enhanced educational opportunities. Their mission centers around building a physical school that offers quality education to empower these children and enable them to break the cycle of poverty. Through this initiative, New Life International Orphanage aims to create a brighter future for orphaned children by providing them with a dedicated educational facility.",
-      ],
-      image: null,
-      style: "MidWidthSection",
-    },
-    {
-      header: null,
-      content: null,
-      images: [
-        "newlife-progress.jpg",
-        "newlife-progress1.jpg",
-        "newlife-progress2.jpg",
-      ],
-      style: "ThreeColImgs",
-    },
-    {
-      header: "Goals",
-      content: [
-        "Complete construction|Clean and secure surrounding area|Educate and edify teachers",
-      ],
-      images: ["cleanup-project.jpg"],
-      style: "LargeImgSection",
-    },
-  ],
-};
+import teamsList from "../teams.json";
 
 function parseContent(content) {
   if (content[0].includes("|")) {
@@ -74,12 +25,12 @@ function parseContent(content) {
   }
 }
 
-function chooseComponent(section) {
+function chooseComponent(team, section) {
   switch (section.style) {
     case "ImgHalfLeft":
       return (
         <ImgHalfLeft
-          key={exTeam.sections.indexOf(section)}
+          key={team.sections.indexOf(section)}
           img={`../src/assets/images/${section.images}`}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
@@ -89,13 +40,13 @@ function chooseComponent(section) {
     case "ThreeColImgs":
       return (
         <ThreeColImgs
-          key={exTeam.sections.indexOf(section)}
+          key={team.sections.indexOf(section)}
           imgs={imgArrayHelper(section.images)}
         ></ThreeColImgs>
       );
     case "MidWidthSection":
       return (
-        <MidWidthSection key={exTeam.sections.indexOf(section)}>
+        <MidWidthSection key={team.sections.indexOf(section)}>
           {section.header != null ? <h2>{section.header}</h2> : null}
           {section.content != null ? <p>{section.content}</p> : null}
         </MidWidthSection>
@@ -103,7 +54,7 @@ function chooseComponent(section) {
     case "LargeImgSection":
       return (
         <LargeImgSection
-          key={exTeam.sections.indexOf(section)}
+          key={team.sections.indexOf(section)}
           img={`../src/assets/images/${section.images}`}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
@@ -123,31 +74,47 @@ function imgArrayHelper(array) {
 }
 
 export default function Team() {
+  const [team, setTeam] = useState({});
+  const [loaded, setLoaded] = useState(false);
+
+  const { teamId } = useParams();
+
   useEffect(() => {
-    document.title = `${exTeam.teamName} | Our TEAMS`;
-    window.scrollTo(0, 0);
-  });
+    const selectedTeam = teamsList.teams.find((team) => team.teamId === teamId);
+
+    if (selectedTeam) {
+      setTeam(selectedTeam);
+      setLoaded(true);
+      document.title = `${selectedTeam.teamName} | Our TEAMS`;
+      window.scrollTo(0, 0);
+    } else {
+      console.error(`Team with ID ${teamId} not found`);
+      setLoaded(true); // Mark as loaded even if the team is not found
+    }
+  }, [teamId]);
+
+  if (!loaded) {
+    return <div>Loading...</div>;
+  } else if (!team.teamId) {
+    return <div>Could not find that team</div>;
+  }
 
   return (
     <div className="team-page">
       <div className="intro-container">
         <TeamIntro
-          bgImg={exTeam.bgImg}
-          teamName={exTeam.teamName}
-          desc={exTeam.desc}
-          donate={exTeam.donate}
-          volunteer={exTeam.volunteer}
+          bgImg={team.bgImg}
+          teamName={team.teamName}
+          desc={team.desc}
+          donate={team.donate}
+          volunteer={team.volunteer}
         />
       </div>
       <div className="body-content">
-        <ProgBar
-          goal={exTeam.goal}
-          prog={exTeam.progress}
-          subs={exTeam.subgoals}
-        />
+        <ProgBar goal={team.goal} prog={team.progress} subs={team.subgoals} />
         <div className="team-sections">
-          {exTeam.sections.map((sect) => {
-            return chooseComponent(sect);
+          {team.sections.map((sect) => {
+            return chooseComponent(team, sect);
           })}
         </div>
       </div>

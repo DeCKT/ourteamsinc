@@ -66,6 +66,11 @@ export default function Carousel() {
     return () => clearInterval(interval);
   }, [active]);
 
+  const slideStyle = {
+    transform: `translateX(-${active * 100}%)`,
+    transition: "transform 0.5s ease-in-out",
+  };
+
   return (
     <>
       <div
@@ -75,7 +80,7 @@ export default function Carousel() {
           backgroundPosition: slides[active].pos,
         }}
       >
-        <div className="carousel-content">
+        <div className="carousel-content" style={slideStyle}>
           <div className="white-background">
             <p>{slides[active].desc}</p>
             <Button>{slides[active].btn}</Button>

@@ -18,7 +18,7 @@ export default function ProjTeam(props) {
   // }, [props.img]);
   return (
     <li>
-      <Link to="">
+      <Link to={props.page}>
         <img src={props.img} alt="" />
         <div className="team-name">{props.name}</div>
       </Link>

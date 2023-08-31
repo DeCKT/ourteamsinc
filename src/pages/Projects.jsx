@@ -14,11 +14,13 @@ const teams = [
     name: "New Life International",
     img: darinExplain,
     type: "Active",
+    page: "/team/1",
   },
   {
     name: "Jukwa Liverpool",
     img: soccer,
     type: "Alumni",
+    page: "/team/10",
   },
 ];
 
@@ -53,6 +55,7 @@ function Projects() {
                   key={teams.indexOf(team)}
                   img={team.img}
                   name={team.name}
+                  page={team.page}
                 />
               ))}
           </ul>
@@ -67,6 +70,7 @@ function Projects() {
                   key={teams.indexOf(team)}
                   img={team.img}
                   name={team.name}
+                  page={team.page}
                 />
               ))}
           </ul>
@@ -79,7 +83,9 @@ function Projects() {
           Do you have an idea for a service project which could benefit from our
           organization? We would love to work with you!
         </p>
-        <Button>Apply Now</Button>
+        <Link to="/teams-application" className="btn">
+          Apply Now
+        </Link>
       </LargeImgSection>
     </div>
   );

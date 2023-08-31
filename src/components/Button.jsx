@@ -1,8 +1,10 @@
 import { useState } from "react";
 
-function Button({ outlined, children }) {
+function Button({ outlined, children, func }) {
   return (
-    <button className={`btn ${outlined ? "outlined" : ""}`}>{children}</button>
+    <button onClick={func} className={`btn ${outlined ? "outlined" : ""}`}>
+      {children}
+    </button>
   );
 }
 

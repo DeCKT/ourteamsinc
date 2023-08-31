@@ -54,21 +54,23 @@ export default function Form(props) {
           <div className="form" key={props.pages.indexOf(page)}>
             <div className="form-title-container">
               <h3>{page.pageTitle}</h3>
-              {props.pages.length > 1 ? (
+              {props.pages.length > 2 ? (
                 <span className="page-indicator">
-                  Step {props.pages.indexOf(page) + 1}/{props.pages.length}
+                  Step {props.pages.indexOf(page) + 1}/{props.pages.length - 1}
                 </span>
               ) : (
                 <></>
               )}
             </div>
             <div key={props.pages.indexOf(page)} className="form-page">
-              {page.fields.map((field) => {
-                let key = page.fields.indexOf(field);
-                return renderInputs(field, key);
-              })}
+              {!page.fields
+                ? page.message
+                : page.fields.map((field) => {
+                    let key = page.fields.indexOf(field);
+                    return renderInputs(field, key);
+                  })}
               <div className="form-button-container">
-                {props.pages.indexOf(page) + 1 == props.pages.length ? (
+                {props.pages.indexOf(page) + 1 == props.pages.length - 1 ? (
                   <Button>Submit</Button>
                 ) : (
                   <Button>Next</Button>

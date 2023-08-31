@@ -19,6 +19,7 @@ import motivImg5 from "../assets/images/stacy-and-troy.jpg";
 import motivImg6 from "../assets/images/darin-and-betsy.jpg";
 
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const people = [
   {
@@ -51,9 +52,8 @@ const motivationImgs = [
 ];
 
 function About() {
-  document.title = "Who We Are | Our TEAMS";
-
   useEffect(() => {
+    document.title = "Who We Are | Our TEAMS";
     window.scrollTo(0, 0);
   });
 
@@ -100,7 +100,9 @@ function About() {
             <li>Mentoring, web presence, and accountability</li>
           </ul>
 
-          <Button>Apply Now</Button>
+          <Link to="/teams-application" className="btn">
+            Apply Now
+          </Link>
         </LargeImgSection>
 
         <div className="motivation-img-container">

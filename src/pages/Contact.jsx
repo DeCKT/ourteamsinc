@@ -2,6 +2,20 @@ import { Link } from "react-router-dom";
 import Form from "../components/Form";
 import { useEffect } from "react";
 
+const confMsg = () => {
+  return (
+    <>
+      <h5>Thank you for your message!</h5>
+      <p>
+        We will be in touch soon. In the meantime, check out some of our current
+        projects <Link to="/what-were-doing">here</Link>!
+      </p>
+    </>
+  );
+};
+
+console.log(confMsg);
+
 const contactPage = [
   {
     pageTitle: "Message",
@@ -13,6 +27,7 @@ const contactPage = [
       { type: "textarea", text: "Type your message here..." },
     ],
   },
+  { pageTitle: "Submitted", message: confMsg() },
 ];
 
 function Contact() {
@@ -26,17 +41,11 @@ function Contact() {
         <h1>Contact Us</h1>
         <p>We'd love to hear from you!</p>
         <p>
-          Have an idea for a project? Click <Link>here</Link> to submit an
-          application.
+          Have an idea for a project? Click{" "}
+          <Link to="/teams-application">here</Link> to submit an application.
         </p>
       </div>
-      <Form pages={contactPage}>
-        <h5>Thank you for your message!</h5>
-        <p>
-          We will be in touch soon. In the meantime, check out some of our
-          current projects <Link>here</Link>!
-        </p>
-      </Form>
+      <Form pages={contactPage}></Form>
     </div>
   );
 }

@@ -63,7 +63,7 @@ function Apply() {
           We're excited to see how we can work together to improve lives! We
           will be reviewing your application, and will reach out soon. In the
           meantime, consider donating to one of our existing TEAMS{" "}
-          <Link>here</Link>!
+          <Link to="/make-a-difference">here</Link>!
         </p>
       </Form>
     </div>

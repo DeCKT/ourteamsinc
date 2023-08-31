@@ -43,9 +43,7 @@
         {
           "header": "Goals",
           "content": [
-            "Complete construction",
-            "Clean and secure surrounding area",
-            "Educate and edify teachers"
+            "Complete construction|Clean and secure surrounding area|Educate and edify teachers"
           ],
           "images": ["cleanup-project.jpg"],
           "style": "LargeImgSection"

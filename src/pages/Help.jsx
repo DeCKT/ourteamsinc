@@ -1,6 +1,7 @@
 import ImgHalfLeft from "../components/ImgHalfLeft";
 import MidWidthSection from "../components/MidWidthSection";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 import nepalGroup from "../assets/images/nepal-group-before.jpg";
 import { useEffect } from "react";
@@ -10,25 +11,25 @@ const displayTeams = [
     name: "Bethesda",
     desc: "Assist students with limited to no financial ability to more effectively endure the challenges associated with losing a child.",
     type: "donate",
-    page: "bethesda",
+    page: "/team/6",
   },
   {
     name: "New Life International",
     desc: "We are helping to build New Life International Orphanage a secondary school to improve educational opportunities.",
     type: "donate",
-    page: "new-life-intl",
+    page: "/team/1",
   },
   {
     name: "Vanuatu Med",
     desc: "Prepare and provide pediatric resources and training to doctors in Vanuatu according to their needs and desires.",
     type: "volunteer",
-    page: "vanuatu-med",
+    page: "/team/7",
   },
   {
     name: "Mobia Village",
     desc: "Provide the people of Mobia Village in Ghana with proper community structure and shelter.",
     type: "volunteer",
-    page: "mobia-village",
+    page: "/team/8",
   },
 ];
 
@@ -79,15 +80,19 @@ function Help() {
                     <p>{team.desc}</p>
                     <div className="buttons">
                       <Button>Donate</Button>
-                      <Button outlined>Learn More</Button>
+                      <Link to={team.page} className="btn outlined">
+                        Learn More
+                      </Link>
                     </div>
                   </li>
                 );
               })}
             <li className="application-block">
-              New TEAM
-              <br />
-              Application<span>+</span>
+              <Link to="/teams-application" className="panel">
+                New TEAM
+                <br />
+                Application<span>+</span>
+              </Link>
             </li>
           </ul>
         </div>
@@ -111,13 +116,17 @@ function Help() {
                     <p>{team.desc}</p>
                     <div className="buttons">
                       <Button>Volunteer</Button>
-                      <Button outlined>Learn More</Button>
+                      <Link to={team.page} className="btn outlined">
+                        Learn More
+                      </Link>
                     </div>
                   </li>
                 );
               })}
             <li className="application-block">
-              New TEAM Application<span>+</span>
+              <Link to="/teams-application" className="panel">
+                New TEAM Application<span>+</span>
+              </Link>
             </li>
           </ul>
         </div>

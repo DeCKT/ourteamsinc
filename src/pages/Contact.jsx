@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const confMsg = () => {
   return (
@@ -14,8 +14,6 @@ const confMsg = () => {
   );
 };
 
-console.log(confMsg);
-
 const contactPage = [
   {
     pageTitle: "Message",
@@ -23,17 +21,26 @@ const contactPage = [
       {
         type: "email",
         text: "Email Address",
+        objKey: "msgEmail",
       },
-      { type: "textarea", text: "Type your message here..." },
+      {
+        type: "textarea",
+        text: "Type your message here...",
+        objKey: "msgContent",
+      },
     ],
   },
   { pageTitle: "Submitted", message: confMsg() },
 ];
 
+const fieldIds = ["msgEmail", "msgContent"];
+
 function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+
+  const [form, setForm] = useState({});
 
   return (
     <div className="body-content">
@@ -45,7 +52,7 @@ function Contact() {
           <Link to="/teams-application">here</Link> to submit an application.
         </p>
       </div>
-      <Form pages={contactPage}></Form>
+      <Form pages={contactPage} setForm={setForm} fieldIds={fieldIds}></Form>
     </div>
   );
 }

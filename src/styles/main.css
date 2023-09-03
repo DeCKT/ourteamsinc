@@ -521,12 +521,14 @@ h5 {
 
 /* forms */
 
-.thanks-page p {
-  padding-right: 45%;
-}
-
 .form-description {
   padding-right: 35%;
+}
+
+.form-container {
+  position: relative;
+  height: 540px;
+  /* margin-bottom:  */
 }
 
 .form-title-container {
@@ -542,11 +544,14 @@ h5 {
   font-size: 18px;
 }
 
-/* .form {
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-} */
+.form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition-duration: 0.3s;
+}
 
 .form-page {
   background-color: var(--trans-white);
@@ -596,6 +601,7 @@ textarea {
   bottom: 30px;
   right: 30px;
   left: 30px;
+  gap: 10px;
 }
 
 /* footer */

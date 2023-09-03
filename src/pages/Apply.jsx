@@ -2,29 +2,69 @@ import Form from "../components/Form";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
+const submitMsg = () => {
+  return (
+    <>
+      <h5>Thank you for your application!</h5>
+      <p>
+        We're excited to see how we can work together to improve lives! We will
+        be reviewing your application, and will reach out soon. In the meantime,
+        consider donating to one of our existing TEAMS{" "}
+        <Link to="/make-a-difference">here</Link>!
+      </p>
+    </>
+  );
+};
+
 const applicationPages = [
   {
     pageTitle: "Personal Information",
     fields: [
-      { type: "text", text: "First Name" },
-      { type: "text", text: "Last Name" },
-      { type: "email", text: "Email Address" },
-      { type: "tel", text: "Phone Number" },
+      { type: "text", text: "First Name", id: "firstName" },
+      { type: "text", text: "Last Name", id: "lastName" },
+      { type: "email", text: "Email Address", id: "emailAddr" },
+      { type: "tel", text: "Phone Number", id: "phoneNum" },
     ],
   },
   {
     pageTitle: "Project Goals/Desired Outcomes",
-    fields: [{ type: "textarea", text: "What are you hoping to accomplish?" }],
+    fields: [
+      {
+        type: "textarea",
+        text: "What are you hoping to accomplish?",
+        id: "projGoals",
+      },
+    ],
   },
   {
     pageTitle: "How Will You Accomplish Your Goals/Outcomes?",
-    fields: [{ type: "textarea", text: "What is your plan?" }],
+    fields: [{ type: "textarea", text: "What is your plan?", id: "projPlan" }],
   },
   {
     pageTitle: "Anticipated Timeline",
-    fields: [{ type: "textarea", text: "What are your target dates?" }],
+    fields: [
+      {
+        type: "textarea",
+        text: "What are your target dates?",
+        id: "projTimeline",
+      },
+    ],
+  },
+  {
+    pageTitle: "Application Submitted",
+    message: submitMsg(),
   },
 ];
+
+const respFields = {
+  firstName: "firstName",
+  lastName: "lastName",
+  email: "emailAddr",
+  phone: "phoneNum",
+  goals: "projGoals",
+  plan: "projPlan",
+  timeline: "projTimeline",
+};
 
 function Apply() {
   useEffect(() => {
@@ -57,15 +97,7 @@ function Apply() {
           <a href="mailto:admin@ourteamsinc.org">admin@ourteamsinc.org</a>)
         </div>
       </div>
-      <Form pages={applicationPages}>
-        <h5>Thank you for your application!</h5>
-        <p>
-          We're excited to see how we can work together to improve lives! We
-          will be reviewing your application, and will reach out soon. In the
-          meantime, consider donating to one of our existing TEAMS{" "}
-          <Link to="/make-a-difference">here</Link>!
-        </p>
-      </Form>
+      <Form pages={applicationPages} resp={respFields}></Form>
     </div>
   );
 }

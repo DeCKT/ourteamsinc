@@ -1,6 +1,6 @@
 import Form from "../components/Form";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const submitMsg = () => {
   return (
@@ -20,10 +20,10 @@ const applicationPages = [
   {
     pageTitle: "Personal Information",
     fields: [
-      { type: "text", text: "First Name", id: "firstName" },
-      { type: "text", text: "Last Name", id: "lastName" },
-      { type: "email", text: "Email Address", id: "emailAddr" },
-      { type: "tel", text: "Phone Number", id: "phoneNum" },
+      { type: "text", text: "First Name", objKey: "firstName" },
+      { type: "text", text: "Last Name", objKey: "lastName" },
+      { type: "email", text: "Email Address", objKey: "emailAddr" },
+      { type: "tel", text: "Phone Number", objKey: "phoneNum" },
     ],
   },
   {
@@ -32,13 +32,15 @@ const applicationPages = [
       {
         type: "textarea",
         text: "What are you hoping to accomplish?",
-        id: "projGoals",
+        objKey: "projGoals",
       },
     ],
   },
   {
     pageTitle: "How Will You Accomplish Your Goals/Outcomes?",
-    fields: [{ type: "textarea", text: "What is your plan?", id: "projPlan" }],
+    fields: [
+      { type: "textarea", text: "What is your plan?", objKey: "projPlan" },
+    ],
   },
   {
     pageTitle: "Anticipated Timeline",
@@ -46,7 +48,7 @@ const applicationPages = [
       {
         type: "textarea",
         text: "What are your target dates?",
-        id: "projTimeline",
+        objKey: "projTimeline",
       },
     ],
   },
@@ -56,21 +58,23 @@ const applicationPages = [
   },
 ];
 
-const respFields = {
-  firstName: "firstName",
-  lastName: "lastName",
-  email: "emailAddr",
-  phone: "phoneNum",
-  goals: "projGoals",
-  plan: "projPlan",
-  timeline: "projTimeline",
-};
+const fieldIds = [
+  "firstName",
+  "lastName",
+  "emailAddr",
+  "phoneNum",
+  "projGoals",
+  "projPlan",
+  "projTimeline",
+];
 
 function Apply() {
   useEffect(() => {
     document.title = "Application | Our TEAMS Inc";
     window.scrollTo(0, 0);
   }, []);
+
+  const [form, setForm] = useState({});
 
   return (
     <div className="body-content">
@@ -97,7 +101,11 @@ function Apply() {
           <a href="mailto:admin@ourteamsinc.org">admin@ourteamsinc.org</a>)
         </div>
       </div>
-      <Form pages={applicationPages} resp={respFields}></Form>
+      <Form
+        pages={applicationPages}
+        fieldIds={fieldIds}
+        setForm={setForm}
+      ></Form>
     </div>
   );
 }

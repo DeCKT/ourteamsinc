@@ -38,6 +38,7 @@ const fieldIds = ["msgEmail", "msgContent"];
 function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = `Contact Us | Our TEAMS`;
   });
 
   const [form, setForm] = useState({});

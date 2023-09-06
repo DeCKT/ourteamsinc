@@ -6,8 +6,11 @@ export default function Form(props) {
   const [responses, setResponses] = useState({});
 
   const subForm = () => {
-    // let fieldValues = props.fieldIds.map((id) => document.getElementById(id));
-    console.log(responses);
+    window.alert(
+      `The recorded responses are: ${Object.values(responses).map(
+        (resp) => `\n${resp}`
+      )}`
+    );
     props.setForm(responses);
   };
 

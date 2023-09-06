@@ -253,6 +253,47 @@ h5 {
   border: none;
 }
 
+.map-container {
+  margin-top: 60px;
+  position: relative;
+}
+
+.pin-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.pin-hover {
+  position: absolute;
+  display: none;
+  width: 200px;
+  background-color: var(--trans-white);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  overflow: hidden;
+  transform: translateY(-60%);
+}
+
+.hovered {
+  display: block;
+}
+
+.to-right {
+  left: 100%;
+}
+
+.to-left {
+  right: 100%;
+}
+
+.map-container img {
+  width: 100%;
+}
+
 /* about */
 
 .card-container {

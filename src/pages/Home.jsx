@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Carousel from "../components/Carousel";
-import quote from "../assets/platoquote.svg";
-import map from "../assets/worldmap.svg";
+import quote from "/assets/platoquote.svg";
+import map from "/assets/worldmap.svg";
 import Pin from "../components/Pin";
 
 const pins = [

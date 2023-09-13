@@ -4,19 +4,19 @@ import LargeImgSection from "../components/LargeImgSection";
 import Button from "../components/Button";
 import ThreeColImgs from "../components/ThreeColImgs";
 
-import darinAndBetsy from "../assets/images/darin-and-betsy.jpg";
-import darinInstructing from "../assets/images/darin-instructing.jpg";
+import darinAndBetsy from "/assets/images/darin-and-betsy.jpg";
+import darinInstructing from "/assets/images/darin-instructing.jpg";
 
-import darin from "../assets/images/darin-eckton.jpeg";
-import betsy from "../assets/images/betsy-eckton.jpg";
-import troy from "../assets/images/troy-carter.jpeg";
+import darin from "/assets/images/darin-eckton.jpeg";
+import betsy from "/assets/images/betsy-eckton.jpg";
+import troy from "/assets/images/troy-carter.jpeg";
 
-import motivImg1 from "../assets/images/children1.jpg";
-import motivImg2 from "../assets/images/darin-and-elder.jpg";
-import motivImg3 from "../assets/images/woman1.jpg";
-import motivImg4 from "../assets/images/woman-and-children.jpg";
-import motivImg5 from "../assets/images/stacy-and-troy.jpg";
-import motivImg6 from "../assets/images/darin-and-betsy.jpg";
+import motivImg1 from "/assets/images/children1.jpg";
+import motivImg2 from "/assets/images/darin-and-elder.jpg";
+import motivImg3 from "/assets/images/woman1.jpg";
+import motivImg4 from "/assets/images/woman-and-children.jpg";
+import motivImg5 from "/assets/images/stacy-and-troy.jpg";
+import motivImg6 from "/assets/images/darin-and-betsy.jpg";
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";

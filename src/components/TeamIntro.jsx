@@ -5,21 +5,7 @@ import Button from "./Button";
 export default function TeamIntro(props) {
   const [image, setImage] = useState("");
 
-  const bgImg = `url(../src/assets/images/${props.bgImg})`;
-  // useEffect(() => {
-  //   const fetchImg = async () => {
-  //     try {
-  //       const resp = await import(
-  //         `../assets/images/${props.bgImg}` /* @vite-ignore */
-  //       );
-  //       setImage(resp.default);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-
-  //   fetchImg();
-  // }, [props]);
+  const bgImg = `url(/assets/images/${props.bgImg})`;
 
   return (
     <>

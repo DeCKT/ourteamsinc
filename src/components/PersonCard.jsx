@@ -1,22 +1,8 @@
-import emailSvg from "../assets/email-svgrepo-com.svg";
+import emailSvg from "/assets/email-svgrepo-com.svg";
 import { useEffect, useState } from "react";
 
 const PersonCard = (props) => {
   const [image, setImage] = useState("");
-
-  // useEffect(() => {
-  //   const fetchImg = async () => {
-  //     try {
-  //       const resp = await import(
-  //         `../assets/images/${props.img}` /* @vite-ignore */
-  //       );
-  //       setImage(resp.default);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-  //   fetchImg();
-  // }, [props.img]);
 
   return (
     <div className="person-card">

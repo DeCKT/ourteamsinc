@@ -39,7 +39,7 @@ export default function Pin(props) {
           props.pin.pinLeft
         )}`}
       >
-        <img src={`../src/assets/images/${props.pin.teamPic}`} alt="" />
+        <img src={`/assets/images/${props.pin.teamPic}`} alt="" />
         <h3>{props.pin.teamName}</h3>
       </div>
     </div>

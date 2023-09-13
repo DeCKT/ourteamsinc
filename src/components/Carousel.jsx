@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import cslImg1 from "../assets/images/darin-and-children.jpg";
-import cslImg2 from "../assets/images/darin-explaining.jpg";
-import cslImg3 from "../assets/images/darin-sharing.jpg";
-import cslImg4 from "../assets/images/group-patching.jpg";
-import cslImg5 from "../assets/images/medical-help.jpg";
+import cslImg1 from "/assets/images/darin-and-children.jpg";
+import cslImg2 from "/assets/images/darin-explaining.jpg";
+import cslImg3 from "/assets/images/darin-sharing.jpg";
+import cslImg4 from "/assets/images/group-patching.jpg";
+import cslImg5 from "/assets/images/medical-help.jpg";
 
 const carousel = [
   {

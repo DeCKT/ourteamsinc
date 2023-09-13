@@ -3,7 +3,7 @@ import MidWidthSection from "../components/MidWidthSection";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
-import nepalGroup from "../assets/images/nepal-group-before.jpg";
+import nepalGroup from "/assets/images/nepal-group-before.jpg";
 import { useEffect } from "react";
 
 const displayTeams = [

@@ -1,5 +1,5 @@
-import check from "../assets/check-circle-svgrepo-com.svg";
-import ongoing from "../assets/clock-svgrepo-com.svg";
+import check from "/assets/check-circle-svgrepo-com.svg";
+import ongoing from "/assets/clock-svgrepo-com.svg";
 
 export default function ProgBar(props) {
   return (

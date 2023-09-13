@@ -31,7 +31,7 @@ function chooseComponent(team, section) {
       return (
         <ImgHalfLeft
           key={team.sections.indexOf(section)}
-          img={`../src/assets/images/${section.images}`}
+          img={`/assets/images/${section.images}`}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
           {section.content != null ? <p>{section.content}</p> : null}
@@ -55,7 +55,7 @@ function chooseComponent(team, section) {
       return (
         <LargeImgSection
           key={team.sections.indexOf(section)}
-          img={`../src/assets/images/${section.images}`}
+          img={`/assets/images/${section.images}`}
         >
           {section.header != null ? <h2>{section.header}</h2> : null}
           {section.content != null ? parseContent(section.content) : null}
@@ -69,7 +69,7 @@ function chooseComponent(team, section) {
 
 function imgArrayHelper(array) {
   return array.map((url) => {
-    return `../src/assets/images/${url}`;
+    return `/assets/images/${url}`;
   });
 }
 

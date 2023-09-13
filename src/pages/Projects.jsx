@@ -3,9 +3,9 @@ import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import ProjTeam from "../components/ProjTeam";
 
-import darinExplain from "../assets/images/darin-explaining.jpg";
-import soccer from "../assets/images/belle-maluf-xupZLJZ1RB8-unsplash.jpg";
-import nepalGroup from "../assets/images/nepal-group.jpg";
+import darinExplain from "/assets/images/darin-explaining.jpg";
+import soccer from "/assets/images/belle-maluf-xupZLJZ1RB8-unsplash.jpg";
+import nepalGroup from "/assets/images/nepal-group.jpg";
 
 import { useEffect } from "react";
 

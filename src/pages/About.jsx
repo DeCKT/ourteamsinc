@@ -60,21 +60,31 @@ function About() {
   return (
     <>
       <div className="body-content">
-        <ImgHalfLeft img={darinAndBetsy} alt="">
+        {/* <ImgHalfLeft img={darinAndBetsy} alt="">
           <h1>Who We Are</h1>
           <p>
-            Our mission is to pursue educational and developmental opportunities
-            in such a way that all are edified, the teacher and the learner, the
-            recipient and the giver, with a focus on Tailored Accountability,
-            Mentoring and Service.
+            Our mission is to help individuals, families, and other groups to
+            use our non-profit organization to create their own educational or
+            other developmental projects throughout the world.
+          </p>
+        </ImgHalfLeft> */}
+        <ImgHalfLeft
+          img="https://drive.google.com/uc?id=1hQVXLhOi2zIh3C4dc16tIkrAxYRflxyp"
+          alt=""
+        >
+          <h1>Who We Are</h1>
+          <p>
+            Our mission is to help individuals, families, and other groups to
+            use our non-profit organization to create their own educational or
+            other developmental projects throughout the world.
           </p>
         </ImgHalfLeft>
 
         <div className="person-cards">
           <h2>Our People</h2>
           <p>
-            We are all unpaid volunteers,
-            <br /> dedicated to making a difference.
+            We are all unpaid volunteers who donate their time to help others
+            make a difference.
           </p>
           <div className="card-container">
             {people.map((person) => {
@@ -93,11 +103,13 @@ function About() {
 
         <LargeImgSection img={darinInstructing}>
           <h2>Our Structure</h2>
-          <p>Creating TEAMS provides:</p>
+          <p>Create your own TEAM</p>
           <ul>
-            <li>Organizational and tax structure</li>
-            <li>Formation according to our charter</li>
-            <li>Mentoring, web presence, and accountability</li>
+            <li>
+              Have a project that is educational or developmental in nature?
+            </li>
+            <li>Use our 501c3 tax-exempt status for your project</li>
+            <li>We’ll provide mentoring, accountability, and advertisement</li>
           </ul>
 
           <Link to="/teams-application" className="btn">

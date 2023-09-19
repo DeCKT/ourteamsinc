@@ -3,6 +3,7 @@
     {
       "teamId": "1",
       "teamName": "New Life International",
+      "teamStatus": "Active",
       "desc": "We are aiming to raise $35,000 to help complete construction of the New life International Orphanage secondary school.",
       "bgImg": "darin-and-children.jpg",
       "donate": "donate-url",
@@ -45,6 +46,471 @@
           "content": [
             "Complete construction|Clean and secure surrounding area|Educate and edify teachers"
           ],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "2",
+      "teamName": "Mobia",
+      "teamStatus": "Active",
+      "desc": "Description for Mobia",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-Mobia",
+      "volunteer": "volunteer-url-for-Mobia",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for Mobia" },
+        { "amount": 30000, "purpose": "Another Subgoal for Mobia" }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for Mobia - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for Mobia - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for Mobia - Goals Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "3",
+      "teamName": "High School Alumni Scholarships",
+      "teamStatus": "Active",
+      "desc": "Description for High School Alumni Scholarships",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-High-School-Alumni-Scholarships",
+      "volunteer": "volunteer-url-for-High-School-Alumni-Scholarships",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        {
+          "amount": 15000,
+          "purpose": "Subgoal for High School Alumni Scholarships"
+        },
+        {
+          "amount": 30000,
+          "purpose": "Another Subgoal for High School Alumni Scholarships"
+        }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": [
+            "Description for High School Alumni Scholarships - About Section"
+          ],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": [
+            "Description for High School Alumni Scholarships - MidWidthSection"
+          ],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": [
+            "Description for High School Alumni Scholarships - Goals Section"
+          ],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "4",
+      "teamName": "Bethesda",
+      "teamStatus": "Active",
+      "desc": "Description for Bethesda",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-Bethesda",
+      "volunteer": "volunteer-url-for-Bethesda",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for Bethesda" },
+        { "amount": 30000, "purpose": "Another Subgoal for Bethesda" }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for Bethesda - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for Bethesda - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for Bethesda - Goals Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "5",
+      "teamName": "Nepal",
+      "teamStatus": "Alumni",
+      "desc": "Description for Nepal",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-Nepal",
+      "volunteer": "volunteer-url-for-Nepal",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for Nepal" },
+        { "amount": 30000, "purpose": "Another Subgoal for Nepal" }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for Nepal - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for Nepal - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for Nepal - Goals Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "6",
+      "teamName": "Jukwa Liverpool",
+      "teamStatus": "Alumni",
+      "desc": "Description for Jukwa Liverpool",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-Jukwa-Liverpool",
+      "volunteer": "volunteer-url-for-Jukwa-Liverpool",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for Jukwa Liverpool" },
+        { "amount": 30000, "purpose": "Another Subgoal for Jukwa Liverpool" }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for Jukwa Liverpool - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for Jukwa Liverpool - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for Jukwa Liverpool - Goals Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "7",
+      "teamName": "Santa Isabel",
+      "teamStatus": "Alumni",
+      "desc": "Description for Santa Isabel",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-Santa-Isabel",
+      "volunteer": "volunteer-url-for-Santa-Isabel",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for Santa Isabel" },
+        { "amount": 30000, "purpose": "Another Subgoal for Santa Isabel" }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for Santa Isabel - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for Santa Isabel - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for Santa Isabel - Goals Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "8",
+      "teamName": "Scholarships",
+      "teamStatus": "Alumni",
+      "desc": "Description for Scholarships",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-Scholarships",
+      "volunteer": "volunteer-url-for-Scholarships",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for Scholarships" },
+        { "amount": 30000, "purpose": "Another Subgoal for Scholarships" }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for Scholarships - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for Scholarships - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for Scholarships - Goals Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "9",
+      "teamName": "Vanuatu",
+      "teamStatus": "Alumni",
+      "desc": "Description for Vanuatu",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-Vanuatu",
+      "volunteer": "volunteer-url-for-Vanuatu",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for Vanuatu" },
+        { "amount": 30000, "purpose": "Another Subgoal for Vanuatu" }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for Vanuatu - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for Vanuatu - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for Vanuatu - Goals Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "10",
+      "teamName": "TEAM Abraham",
+      "teamStatus": "Alumni",
+      "desc": "Description for TEAM Abraham",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-TEAM-Abraham",
+      "volunteer": "volunteer-url-for-TEAM-Abraham",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for TEAM Abraham" },
+        { "amount": 30000, "purpose": "Another Subgoal for TEAM Abraham" }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for TEAM Abraham - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for TEAM Abraham - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for TEAM Abraham - Goals Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "LargeImgSection"
+        }
+      ]
+    },
+    {
+      "teamId": "11",
+      "teamName": "Wheelchairs in Ghana",
+      "teamStatus": "Alumni",
+      "desc": "Description for Wheelchairs in Ghana",
+      "bgImg": "darin-and-children.jpg",
+      "donate": "donate-url-for-Wheelchairs-in-Ghana",
+      "volunteer": "volunteer-url-for-Wheelchairs-in-Ghana",
+      "goal": 35000,
+      "progress": 29402,
+      "subgoals": [
+        { "amount": 15000, "purpose": "Subgoal for Wheelchairs in Ghana" },
+        {
+          "amount": 30000,
+          "purpose": "Another Subgoal for Wheelchairs in Ghana"
+        }
+      ],
+      "sections": [
+        {
+          "header": "About",
+          "content": ["Description for Wheelchairs in Ghana - About Section"],
+          "images": ["cleanup-project.jpg"],
+          "style": "ImgHalfLeft"
+        },
+        {
+          "header": null,
+          "content": ["Description for Wheelchairs in Ghana - MidWidthSection"],
+          "images": null,
+          "style": "MidWidthSection"
+        },
+        {
+          "header": null,
+          "content": null,
+          "images": [
+            "newlife-progress.jpg",
+            "newlife-progress1.jpg",
+            "newlife-progress2.jpg"
+          ],
+          "style": "ThreeColImgs"
+        },
+        {
+          "header": "Goals",
+          "content": ["Description for Wheelchairs in Ghana - Goals Section"],
           "images": ["cleanup-project.jpg"],
           "style": "LargeImgSection"
         }

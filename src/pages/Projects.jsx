@@ -3,26 +3,22 @@ import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import ProjTeam from "../components/ProjTeam";
 
+import teamsList from "../teams.json";
+
 import darinExplain from "/assets/images/darin-explaining.jpg";
 import soccer from "/assets/images/belle-maluf-xupZLJZ1RB8-unsplash.jpg";
 import nepalGroup from "/assets/images/nepal-group.jpg";
 
 import { useEffect } from "react";
 
-const teams = [
-  {
-    name: "New Life International",
-    img: darinExplain,
-    type: "Active",
-    page: "/team/1",
-  },
-  {
-    name: "Jukwa Liverpool",
-    img: soccer,
-    type: "Alumni",
-    page: "/team/10",
-  },
-];
+const teams = teamsList.teams.map((team) => {
+  return {
+    name: team.teamName,
+    img: team.bgImg,
+    type: team.teamStatus,
+    page: `/team/${team.teamId}`,
+  };
+});
 
 // Photo by <a href="https://unsplash.com/@bellemaluf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Belle Maluf</a> on <a href="https://unsplash.com/photos/xupZLJZ1RB8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
@@ -37,16 +33,17 @@ function Projects() {
       <LargeImgSection img={darinExplain}>
         <h1>TEAMS</h1>
         <p>
-          We have a variety of active TEAMS and opportunities to create new
-          TEAMS, alumni TEAMS, service ideas for individuals and groups wanting
-          to do good, and unpaid internships for high school or college students
-          who would like to get involved in a completely non-profit organization
+          We have active TEAMS, alumni TEAMS, and people are creating their own
+          new TEAMS. We hope that individuals, families, interns, and others
+          will want to get involved so they can do more good in the world!
         </p>
       </LargeImgSection>
 
       <div className="teams-list-container">
         <div className="active teams-container">
-          <h2>Active</h2>
+          <div className="header-container">
+            <h2>Active</h2>
+          </div>
           <ul>
             {teams
               .filter((team) => team.type === "Active")
@@ -61,7 +58,9 @@ function Projects() {
           </ul>
         </div>
         <div className="inactive teams-container">
-          <h2>Alumni</h2>
+          <div className="header-container">
+            <h2>Alumni</h2>
+          </div>
           <ul>
             {teams
               .filter((team) => team.type === "Alumni")

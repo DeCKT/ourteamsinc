@@ -53,15 +53,22 @@ h5 {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  box-sizing: border-box;
 }
 
 .img-half {
-  display: flex;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
-.img-half img {
-  width: calc(50% - 50px);
+.img-half .image-container {
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+}
+
+.img-half .image-container img {
+  width: 100%;
 }
 
 .content-half {
@@ -216,7 +223,7 @@ h5 {
   max-width: 1050px;
   padding: 0 50px;
   margin: auto;
-  height: 350px;
+  height: 450px;
   display: flex;
   align-items: center;
 }
@@ -353,6 +360,17 @@ h5 {
 .teams-container {
   display: flex;
   justify-content: space-between;
+}
+
+.header-container {
+  position: relative;
+}
+
+.header-container h2 {
+  position: absolute;
+  top: 100px;
+  left: 45px;
+  transform: rotate(270deg);
 }
 
 .teams-container ul {
@@ -518,7 +536,7 @@ h5 {
 
 .action-teams-container ul li {
   width: 100%;
-  max-width: 480px;
+  max-width: 430px;
 }
 
 .team-block {
@@ -610,7 +628,7 @@ h5 {
 }
 
 .half-input {
-  width: 45%;
+  width: 44%;
 }
 
 .full-input {
@@ -665,6 +683,7 @@ footer a {
   display: grid;
   grid-template: 1fr 1fr / 1fr 70px;
   row-gap: 30px;
+  box-sizing: border-box;
 }
 
 #footer-nav {

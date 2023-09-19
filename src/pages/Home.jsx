@@ -31,7 +31,6 @@ function Home() {
         <Carousel></Carousel>
       </div>
       <div className="body-content">
-        <img src={quote} alt="" />
         <div className="map-container">
           <img src={map} alt="" />
           <div className="pin-container" onClick={clickEvtHandle}>
@@ -40,6 +39,7 @@ function Home() {
             })}
           </div>
         </div>
+        <img src={quote} alt="" />
       </div>
     </div>
   );

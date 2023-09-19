@@ -3,35 +3,53 @@ import MidWidthSection from "../components/MidWidthSection";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
+import teamList from "../teams.json";
+
 import nepalGroup from "/assets/images/nepal-group-before.jpg";
 import { useEffect } from "react";
 
-const displayTeams = [
-  {
-    name: "Bethesda",
-    desc: "Assist students with limited to no financial ability to more effectively endure the challenges associated with losing a child.",
-    type: "donate",
-    page: "/team/6",
-  },
-  {
-    name: "New Life International",
-    desc: "We are helping to build New Life International Orphanage a secondary school to improve educational opportunities.",
-    type: "donate",
-    page: "/team/1",
-  },
-  {
-    name: "Vanuatu Med",
-    desc: "Prepare and provide pediatric resources and training to doctors in Vanuatu according to their needs and desires.",
-    type: "volunteer",
-    page: "/team/7",
-  },
-  {
-    name: "Mobia Village",
-    desc: "Provide the people of Mobia Village in Ghana with proper community structure and shelter.",
-    type: "volunteer",
-    page: "/team/8",
-  },
-];
+const displayTeams = teamList.teams.map((team) => {
+  let teamType = "";
+  if (team.donate) {
+    teamType += "donate ";
+  }
+  if (team.volunteer) {
+    teamType += "volunteer";
+  }
+  return {
+    name: team.teamName,
+    desc: team.desc,
+    type: teamType,
+    page: `/team/${team.teamId}`,
+  };
+});
+
+// const displayTeams = [
+//   {
+//     name: "Bethesda",
+//     desc: "Assist students with limited to no financial ability to more effectively endure the challenges associated with losing a child.",
+//     type: "donate",
+//     page: "/team/6",
+//   },
+//   {
+//     name: "New Life International",
+//     desc: "We are helping to build New Life International Orphanage a secondary school to improve educational opportunities.",
+//     type: "donate",
+//     page: "/team/1",
+//   },
+//   {
+//     name: "Vanuatu Med",
+//     desc: "Prepare and provide pediatric resources and training to doctors in Vanuatu according to their needs and desires.",
+//     type: "volunteer",
+//     page: "/team/7",
+//   },
+//   {
+//     name: "Mobia Village",
+//     desc: "Provide the people of Mobia Village in Ghana with proper community structure and shelter.",
+//     type: "volunteer",
+//     page: "/team/8",
+//   },
+// ];
 
 function Help() {
   useEffect(() => {
@@ -72,7 +90,7 @@ function Help() {
               </div>
             </li>
             {displayTeams
-              .filter((team) => team.type === "donate")
+              .filter((team) => team.type.includes("donate"))
               .map((team) => {
                 return (
                   <li className="team-block" key={displayTeams.indexOf(team)}>
@@ -108,7 +126,7 @@ function Help() {
         <div className="action-teams-container">
           <ul>
             {displayTeams
-              .filter((team) => team.type === "volunteer")
+              .filter((team) => team.type.includes("volunteer"))
               .map((team) => {
                 return (
                   <li className="team-block" key={displayTeams.indexOf(team)}>

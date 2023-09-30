@@ -81,11 +81,14 @@ function About() {
         </ImgHalfLeft>
 
         <div className="person-cards">
-          <h2>Our People</h2>
-          <p>
-            We are all unpaid volunteers who donate their time to help others
-            make a difference.
-          </p>
+          <div className="org-description">
+            <h2>Our People</h2>
+            <p>
+              We are all unpaid volunteers who donate their time to help others
+              make a difference.
+            </p>
+          </div>
+
           <div className="card-container">
             {people.map((person) => {
               return (

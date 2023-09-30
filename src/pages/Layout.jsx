@@ -1,8 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
 import logoMain from "/assets/logo-brand.svg";
 import logoFooter from "/assets/logo-transwhite.svg";
+import { useState } from "react";
+import menuIcon from "/assets/menu-svgrepo-com.svg";
 
 export default function Layout() {
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
     <>
       <div id="pg-head">
@@ -18,7 +22,29 @@ export default function Layout() {
         </Link>
       </div>
       <nav id="main-nav">
-        <ul>
+        <div
+          className="menu-toggle"
+          onClick={() => {
+            setNavOpen(!navOpen);
+          }}
+        >
+          <svg
+            width="30px"
+            height="30px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6H20M4 12H20M4 18H20"
+              stroke="#dcdcdce6"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <ul className={navOpen ? "nav-open" : "nav-closed"}>
           <li>
             <Link to="/who-we-are">Who We Are</Link>
           </li>

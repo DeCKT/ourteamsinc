@@ -72,7 +72,7 @@ h5 {
 }
 
 .content-half {
-  padding: 20px 50px;
+  padding: 20px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -162,7 +162,12 @@ h5 {
   z-index: 5;
 }
 
-#main-nav ul {
+.menu-toggle {
+  display: none;
+}
+
+.nav-open,
+.nav-closed {
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -173,9 +178,11 @@ h5 {
   position: sticky;
   top: 0;
   align-self: flex-start;
+  transition-duration: 0.4s;
 }
 
-#main-nav ul a {
+.nav-open a,
+.nav-closed a {
   display: block;
   padding: 12px 8px;
   text-transform: uppercase;
@@ -188,8 +195,11 @@ h5 {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 10px 0;
+  margin: 0;
+  padding: 10px 50px;
   gap: 20px;
+  background-color: white;
+  z-index: 6;
 }
 
 #pg-head a {
@@ -310,6 +320,10 @@ h5 {
   margin-top: 20px;
 }
 
+.card-name + a {
+  align-self: center;
+}
+
 .person-card {
   width: 30%;
 }
@@ -327,6 +341,7 @@ h5 {
   margin-top: 10px;
   padding-bottom: 8px;
   position: relative;
+  gap: 10px;
 }
 
 .info-container::after {
@@ -339,7 +354,7 @@ h5 {
 }
 
 .email-icon {
-  height: 28px;
+  height: 30px;
 }
 
 .duties {

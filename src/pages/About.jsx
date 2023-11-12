@@ -60,15 +60,15 @@ function About() {
   return (
     <>
       <div className="body-content">
-        {/* <ImgHalfLeft img={darinAndBetsy} alt="">
+        <ImgHalfLeft img={darinAndBetsy} alt="">
           <h1>Who We Are</h1>
           <p>
             Our mission is to help individuals, families, and other groups to
             use our non-profit organization to create their own educational or
             other developmental projects throughout the world.
           </p>
-        </ImgHalfLeft> */}
-        <ImgHalfLeft
+        </ImgHalfLeft>
+        {/* <ImgHalfLeft
           img="https://drive.google.com/uc?id=1hQVXLhOi2zIh3C4dc16tIkrAxYRflxyp"
           alt=""
         >
@@ -78,7 +78,7 @@ function About() {
             use our non-profit organization to create their own educational or
             other developmental projects throughout the world.
           </p>
-        </ImgHalfLeft>
+        </ImgHalfLeft> */}
 
         <div className="person-cards">
           <div className="org-description">

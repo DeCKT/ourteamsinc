@@ -86,4 +86,44 @@
     width: 26px;
     height: 26px;
   }
+
+  .large-img-container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .large-img-section-left {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .person-card {
+    flex-direction: row;
+    gap: 15px;
+    width: auto;
+  }
+
+  .person-img {
+    max-width: 35%;
+  }
+
+  .info-container {
+    flex-direction: column;
+    text-align: center;
+    max-width: 30%;
+    justify-content: space-around;
+  }
+
+  .info-container::after {
+    display: none;
+  }
+
+  .duties {
+    justify-content: center;
+  }
 }

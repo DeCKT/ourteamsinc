@@ -326,6 +326,8 @@ h5 {
 
 .person-card {
   width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 
 .person-img {
